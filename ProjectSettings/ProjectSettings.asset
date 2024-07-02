@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 949dfc0fcf939094ca3fa3e1145adbdc
+  productGUID: cbc31366fae9a96418eccbcfd40ec05b
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 2D
+  productName: 2D t
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -630,14 +630,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 2D
+  metroPackageName: 2D t
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 2D
+  metroApplicationDescription: 2D t
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -706,10 +706,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: b418ffae-f19f-4610-8603-de32bf388e6b
+  cloudProjectId: c060cbfc-0fd5-4277-a882-34092f6a6960
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 2D
+  projectName: 2D t
   organizationId: rlaekdms9312789
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
