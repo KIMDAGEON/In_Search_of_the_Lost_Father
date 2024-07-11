@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator anim;
     private Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -13,9 +14,10 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 8f;
     private bool isFacingRight = true;
-
-    void Start()
+    public Vector2 inputvec;
+    private void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -25,7 +27,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-
+        RunningAnim();
+        
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -36,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
+    void RunningAnim()
+    {
+        inputvec.x = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("Speed", inputvec.magnitude);
+    }
     //점프
     public void Jump(InputAction.CallbackContext context)
     {
@@ -43,11 +51,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-
-        /*if(context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower * 0.5f);
-        }*/
     }
     //바닥에 있을때만 점프가능
     private bool IsGrounded()
