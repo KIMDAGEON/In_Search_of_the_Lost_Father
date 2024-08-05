@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStat : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
+
+    private Animator anim;
+
     public float speed; // 이동속도
     public float hp; // 체력
     public float power; // 힘
@@ -11,11 +14,11 @@ public class EnemyStat : MonoBehaviour
     public float defense; // 방어력
     public float magicResistance; // 마법 저항력
 
-    public string _name;
+    public string monstName;
     public bool isdie = false;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     
@@ -29,15 +32,17 @@ public class EnemyStat : MonoBehaviour
         hp -= Damage;
         if(hp<=0)
         {
-            Die();
+            Death();
         }
     }
 
-    void Die()
+    void Death()
     {
+        anim.SetTrigger("Death");
         if (isdie) return;
         isdie = true;
-        gameObject.SetActive(false);
+
+        //gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

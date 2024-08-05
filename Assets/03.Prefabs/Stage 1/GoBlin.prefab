@@ -199,5 +199,5 @@ MonoBehaviour:
   attackSpeed: 7
   defense: 5
   magicResistance: 0
-  _name: GoBlin
+  monstName: GoBlin
   isdie: 0

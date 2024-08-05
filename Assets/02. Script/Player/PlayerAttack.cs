@@ -58,7 +58,7 @@ public class PlayerAttack : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("2");
-            collision.gameObject.GetComponent<EnemyStat>().Hit(10f);
+            collision.gameObject.GetComponent<Enemy>().Hit(10f);
             
         }
     }

@@ -199,5 +199,5 @@ MonoBehaviour:
   attackSpeed: 4
   defense: 8
   magicResistance: 8
-  _name: Skeleton
+  monstName: Skeleton
   isdie: 0
