@@ -193,10 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607b5aa89683756468c07583b11eb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
-  _Hp: 200
-  _power: 7
-  _attackSpeed: 1
-  _defense: 5
-  _magicResistance: 3
+  speed: 3
+  hp: 150
+  power: 0
+  attackSpeed: 2
+  defense: 3
+  magicResistance: 10
   _name: Mushroom
+  isdie: 0

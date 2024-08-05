@@ -193,10 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607b5aa89683756468c07583b11eb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
-  _Hp: 100
-  _power: 5
-  _attackSpeed: 0.8
-  _defense: 10
-  _magicResistance: 3
+  speed: 4
+  hp: 100
+  power: 5
+  attackSpeed: 4
+  defense: 8
+  magicResistance: 8
   _name: Skeleton
+  isdie: 0

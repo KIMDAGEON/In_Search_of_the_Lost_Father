@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    Animator anim;
+    [SerializeReference] private Collider2D attackCollider;
+
+    private Animator anim;
     private int atkNum = 0;
-    private float attackTime = 0;
+    private float attackTime = 0.5f;
+    private bool attack;
     void Start()
     {
+        attack = true;
+        attackCollider.enabled = false;
         anim = GetComponent<Animator>();
     }
     public void PlayAnimation(int atkNum)
@@ -21,23 +26,40 @@ public class PlayerAttack : MonoBehaviour
     {
         Attack();
     }
+
     void Attack()
     {
-        attackTime += Time.deltaTime;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && attack == true)
         {
-            if (attackTime < 0.5f) { return; }
-
-            PlayAnimation(atkNum++);
-
-            if (atkNum > 2)
-            {
-                atkNum = 0;
-            }
-
-            attackTime = 0;
-
+            StartCoroutine(AttackCooltime());
         }
     }
 
+    IEnumerator AttackCooltime()
+    {
+        attack = false;
+        attackCollider.enabled = true;
+        PlayAnimation(atkNum++);
+
+        if (atkNum > 2)
+        {
+            atkNum = 0;
+        }
+        yield return new WaitForSeconds(attackTime-0.2f);
+        attackCollider.enabled = false;
+        yield return new WaitForSeconds(0.2f);
+
+        attack = true;
+
+        yield return null;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("2");
+            collision.gameObject.GetComponent<EnemyStat>().Hit(10f);
+            
+        }
+    }
 }

@@ -193,10 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607b5aa89683756468c07583b11eb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  _Hp: 50
-  _power: 2
-  _attackSpeed: 0.3
-  _defense: 3
-  _magicResistance: 1
+  speed: 5
+  hp: 30
+  power: 3
+  attackSpeed: 7
+  defense: 5
+  magicResistance: 0
   _name: GoBlin
+  isdie: 0

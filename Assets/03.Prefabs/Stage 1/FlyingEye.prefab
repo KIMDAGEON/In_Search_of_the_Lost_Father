@@ -193,10 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607b5aa89683756468c07583b11eb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 6
-  _Hp: 50
-  _power: 3
-  _attackSpeed: 0.5
-  _defense: 1
-  _magicResistance: 5
+  speed: 6
+  hp: 50
+  power: 5
+  attackSpeed: 3
+  defense: 3
+  magicResistance: 3
   _name: FlyingEye
+  isdie: 0
